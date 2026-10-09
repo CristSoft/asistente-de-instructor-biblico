@@ -1,0 +1,58 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    function validNote(notes, key) {
+      return notes.get(key, '') is string && notes.get(key, '').size() <= 10000;
+    }
+
+    function validLessonNotes(notes) {
+      return notes is map
+        && notes.keys().hasOnly(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+                                '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'])
+        && validNote(notes, '1') && validNote(notes, '2') && validNote(notes, '3')
+        && validNote(notes, '4') && validNote(notes, '5') && validNote(notes, '6')
+        && validNote(notes, '7') && validNote(notes, '8') && validNote(notes, '9')
+        && validNote(notes, '10') && validNote(notes, '11') && validNote(notes, '12')
+        && validNote(notes, '13') && validNote(notes, '14') && validNote(notes, '15')
+        && validNote(notes, '16') && validNote(notes, '17') && validNote(notes, '18')
+        && validNote(notes, '19') && validNote(notes, '20');
+    }
+
+    function validStudent(data, studentId) {
+      return data.keys().hasAll(['id', 'name', 'phone', 'email', 'address', 'notes',
+        'guideId', 'status', 'nextMeeting', 'completedLessons', 'lessonNotes', 'createdAt'])
+        && data.keys().hasOnly(['id', 'name', 'phone', 'email', 'address', 'notes',
+        'guideId', 'status', 'nextMeeting', 'completedLessons', 'lessonNotes', 'createdAt'])
+        && data.id == studentId
+        && data.name is string && data.name.size() > 0 && data.name.size() <= 120
+        && data.phone is string && data.phone.size() <= 60
+        && data.email is string && data.email.size() <= 254
+        && data.address is string && data.address.size() <= 500
+        && data.notes is string && data.notes.size() <= 10000
+        && data.guideId == 'la-fe-de-jesus'
+        && data.status in ['active', 'paused', 'completed']
+        && data.nextMeeting is string && data.nextMeeting.size() <= 30
+        && data.completedLessons is list && data.completedLessons.size() <= 20
+        && data.completedLessons.hasOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                                          11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
+        && data.completedLessons.size() == data.completedLessons.toSet().size()
+        && validLessonNotes(data.lessonNotes)
+        && data.createdAt is string && data.createdAt.size() > 0 && data.createdAt.size() <= 40;
+    }
+
+    match /users/{uid}/students/{studentId} {
+      allow read, delete: if isOwner(uid);
+      allow create: if isOwner(uid) && validStudent(request.resource.data, studentId);
+      allow update: if isOwner(uid) && validStudent(request.resource.data, studentId)
+        && request.resource.data.createdAt == resource.data.createdAt;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
