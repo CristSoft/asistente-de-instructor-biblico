@@ -28,6 +28,10 @@ npm run build
 npm run preview
 ```
 
+Con el servidor de desarrollo en marcha, `npm run test:ui` verifica los flujos principales en Chromium. El script acepta `APP_BASE_URL` para probar el sitio publicado y `PLAYWRIGHT_CHROMIUM_PATH` para indicar otro ejecutable. Las pruebas de reglas se ejecutan con `npm run test:rules` y requieren Firebase CLI y Java 21 o superior. Los resultados de las revisiones independientes están en [requisitos](docs/REVIEW-REQUIREMENTS.md) e [interfaz](docs/REVIEW-INTERFACE.md).
+
+DM Sans y Lora se sirven desde la aplicación; sus licencias se incluyen en `public/licenses`.
+
 La configuración web Firebase identifica el proyecto y no es una credencial administrativa. La autorización depende de Authentication y de las reglas de Firestore. No incorporar claves de cuentas de servicio, tokens de CLI ni archivos privados al repositorio.
 
 ## Datos y privacidad
