@@ -9,6 +9,7 @@ export const guide = {
   edition: 'Guía interactiva · División Sudamericana · 2020 · 20 estudios',
   description: 'Apuntes de acompañamiento redactados para esta app, organizados según la guía interactiva oficial de 20 estudios. Las preguntas, respuestas y sugerencias son una adaptación de apoyo; consultá el material original enlazado en cada tema.',
   sourceUrl,
+  introVideoUrl: 'https://youtu.be/8Avps3cOQJU',
 };
 
 // Contenido de apoyo original. No reproduce íntegramente el cuestionario editorial.
@@ -26,7 +27,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Por dónde puedo comenzar?', answer: 'Un Evangelio permite conocer a Jesús. Leé un pasaje breve y anotá una pregunta para conversar.' },
       { question: '¿Está mal tener preguntas?', answer: 'No. Registrarlas y estudiarlas con paciencia ayuda a construir una fe comprendida.' },
-    ], sourceUrl: pdf(1),
+    ], sourceUrl: pdf(1), videoUrl: 'https://youtu.be/dsdjHEMnFJs',
   },
   {
     id: 2, title: 'Dios', subtitle: 'Conocer al Padre que nos ama.',
@@ -40,7 +41,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Necesito entender todo para creer?', answer: 'La confianza puede crecer mientras estudiamos. Las preguntas sinceras tienen lugar en el camino de fe.' },
       { question: '¿Dios se interesa por mi vida cotidiana?', answer: 'Sí. Compartí también tus alegrías, decisiones y necesidades, no solo las situaciones difíciles.' },
-    ], sourceUrl: pdf(2),
+    ], sourceUrl: pdf(2), videoUrl: 'https://youtu.be/yCIyxcDc5Z4',
   },
   {
     id: 3, title: 'La oración y la fe', subtitle: 'Conversar con Dios con confianza y sinceridad.',
@@ -54,7 +55,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Debo usar palabras especiales?', answer: 'Podés hablar con tus propias palabras. La sinceridad importa más que la elocuencia.' },
       { question: '¿Toda petición se cumple como espero?', answer: 'No. Jesús enseñó a buscar la voluntad del Padre; una demora no demuestra falta de fe (Mateo 26:39).' },
-    ], sourceUrl: pdf(3),
+    ], sourceUrl: pdf(3), videoUrl: 'https://youtu.be/_yl_pItOdTw',
   },
   {
     id: 4, title: 'El origen del mal', subtitle: 'Comprender el conflicto y elegir el bien.',
@@ -68,7 +69,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Todo sufrimiento es un castigo personal?', answer: 'No. Jesús rechazó esa explicación simplista ante un hombre ciego (Juan 9:1-3).' },
       { question: '¿Terminará el sufrimiento?', answer: 'La esperanza bíblica anuncia una creación restaurada sin muerte ni dolor (Apocalipsis 21:4).' },
-    ], sourceUrl: pdf(4),
+    ], sourceUrl: pdf(4), videoUrl: 'https://youtu.be/8w3sjVY7bRQ',
   },
   {
     id: 5, title: 'La salvación', subtitle: 'Recibir el regalo de una vida nueva en Cristo.',
@@ -82,7 +83,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Debo cambiar antes de acercarme?', answer: 'Jesús invita a venir a él. Su gracia nos recibe y nos ayuda a cambiar (Mateo 11:28).' },
       { question: '¿La fe elimina la obediencia?', answer: 'No. Una relación viva con Cristo produce amor y servicio; no compra su aceptación.' },
-    ], sourceUrl: pdf(5),
+    ], sourceUrl: pdf(5), videoUrl: 'https://youtu.be/A6w0d7LF5ww',
   },
   {
     id: 6, title: 'El perdón', subtitle: 'Volver a empezar con una conciencia en paz.',
@@ -96,7 +97,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Y si todavía siento culpa?', answer: 'Los sentimientos pueden tardar. Volvé a la promesa y conversá con alguien de confianza.' },
       { question: '¿Perdonar significa permitir más daño?', answer: 'No. El perdón es compatible con límites, protección y responsabilidad por las consecuencias.' },
-    ], sourceUrl: pdf(6),
+    ], sourceUrl: pdf(6), videoUrl: 'https://youtu.be/iaF_vSdc-ZQ',
   },
   {
     id: 7, title: 'La segunda venida de Jesús', subtitle: 'Una esperanza para vivir el presente.',
@@ -110,7 +111,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Podemos calcular una fecha?', answer: 'No. Jesús afirmó que no conocemos el día ni la hora (Mateo 24:36).' },
       { question: '¿Esperar significa abandonar proyectos?', answer: 'No. La fidelidad cotidiana y el cuidado de otros forman parte de una espera activa.' },
-    ], sourceUrl: pdf(7),
+    ], sourceUrl: pdf(7), videoUrl: 'https://youtu.be/fuLlTdP1P14',
   },
   {
     id: 8, title: 'Las señales de su regreso', subtitle: 'Discernir con serenidad y mantener la esperanza.',
@@ -124,7 +125,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Cada noticia cumple una profecía?', answer: 'No conviene asociarlas automáticamente. Leé el contexto bíblico y verificá la información.' },
       { question: '¿Cómo estudiar este tema sin temor?', answer: 'Poné el foco en Jesús, su promesa y el servicio. Anotá dudas para abordarlas con calma.' },
-    ], sourceUrl: pdf(8),
+    ], sourceUrl: pdf(8), videoUrl: 'https://youtu.be/4ln-8_VU8F0',
   },
   {
     id: 9, title: 'La muerte y la resurrección', subtitle: 'Consuelo ante la pérdida, esperanza en Jesús.',
@@ -138,7 +139,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Tener esperanza impide llorar?', answer: 'No. Jesús también lloró ante una pérdida (Juan 11:35). El dolor necesita tiempo y compañía.' },
       { question: '¿Debemos buscar contacto con los muertos?', answer: 'La Biblia lo desaconseja; invita a buscar dirección en Dios (Deuteronomio 18:10-12).' },
-    ], sourceUrl: pdf(9),
+    ], sourceUrl: pdf(9), videoUrl: 'https://youtu.be/833vgB1ANtw',
   },
   {
     id: 10, title: 'El juicio de Dios', subtitle: 'Justicia y confianza en nuestro Salvador.',
@@ -152,7 +153,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿El juicio contradice la gracia?', answer: 'No. La confianza descansa en Cristo, y la vida muestra nuestra respuesta a su gracia.' },
       { question: '¿Debo vivir aterrorizado?', answer: 'Jesús invita a confiar en su promesa de vida (Juan 5:24). Estudiá este tema desde esa seguridad.' },
-    ], sourceUrl: pdf(10),
+    ], sourceUrl: pdf(10), videoUrl: 'https://youtu.be/NkI67z22dgk',
   },
   {
     id: 11, title: 'La ley de Dios', subtitle: 'El amor expresado en nuestra manera de vivir.',
@@ -166,7 +167,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Basta con cumplir por fuera?', answer: 'Jesús también atiende las intenciones del corazón, como muestra Mateo 5:21-28.' },
       { question: '¿Qué hago si vuelvo a fallar?', answer: 'Acercate a Cristo, reconocé la falta y buscá ayuda para crecer. El fracaso no termina su invitación.' },
-    ], sourceUrl: pdf(11),
+    ], sourceUrl: pdf(11), videoUrl: 'https://youtu.be/t-u3fhpCSiM',
   },
   {
     id: 12, title: 'El sábado', subtitle: 'Un regalo de descanso, encuentro y adoración.',
@@ -180,7 +181,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Guardar el sábado compra la salvación?', answer: 'No. Es una respuesta de amor a Dios, que nos salva por gracia.' },
       { question: '¿Cómo comenzar si trabajo ese día?', answer: 'Conversá con tu instructor y explorá opciones reales de organización y diálogo, sin presiones ni decisiones apresuradas.' },
-    ], sourceUrl: pdf(12),
+    ], sourceUrl: pdf(12), videoUrl: 'https://youtu.be/TGj8mUZ3hY8',
   },
   {
     id: 13, title: 'Cómo vivir el sábado', subtitle: 'Preparar un tiempo de paz y misericordia.',
@@ -194,7 +195,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Qué podemos hacer en familia?', answer: 'Orar, leer, compartir alimentos, pasear en la naturaleza y visitar a alguien que necesite compañía.' },
       { question: '¿Qué pasa ante una urgencia?', answer: 'La enseñanza de Jesús pone en valor ayudar y preservar la vida. Acompañá la necesidad con responsabilidad.' },
-    ], sourceUrl: pdf(13),
+    ], sourceUrl: pdf(13), videoUrl: 'https://youtu.be/DgfG73uVqY4',
   },
   {
     id: 14, title: 'La iglesia de Cristo', subtitle: 'Crecer en una comunidad de fe y servicio.',
@@ -208,7 +209,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Puedo asistir antes de bautizarme?', answer: 'Sí. Podés participar, conocer la comunidad y hacer preguntas durante tu proceso de estudio.' },
       { question: '¿Por qué hay personas imperfectas?', answer: 'La iglesia reúne personas que necesitan gracia y crecimiento. Los errores deben reconocerse y repararse.' },
-    ], sourceUrl: pdf(14),
+    ], sourceUrl: pdf(14), videoUrl: 'https://youtu.be/EEdFcIuU0UY',
   },
   {
     id: 15, title: 'El bautismo', subtitle: 'Una decisión consciente de seguir a Jesús.',
@@ -222,7 +223,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Debo ser perfecto para bautizarme?', answer: 'No. Se busca una fe comprendida y el deseo sincero de seguir creciendo con Cristo.' },
       { question: '¿Quién puede ayudarme a prepararme?', answer: 'Tu instructor y el pastor pueden revisar tus preguntas y acompañar la decisión, respetando tu libertad.' },
-    ], sourceUrl: pdf(15),
+    ], sourceUrl: pdf(15), videoUrl: 'https://youtu.be/46Bi3O6PXgg',
   },
   {
     id: 16, title: 'La vida cristiana', subtitle: 'Seguir creciendo después de la decisión.',
@@ -236,7 +237,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Qué hacer después del curso?', answer: 'Acordá un plan de acompañamiento: estudio, participación comunitaria y una oportunidad de servicio.' },
       { question: '¿Y si el cambio parece lento?', answer: 'La madurez es un proceso. Reconocé pequeños avances y confiá en la obra de Dios (Filipenses 1:6).' },
-    ], sourceUrl: pdf(16),
+    ], sourceUrl: pdf(16), videoUrl: 'https://youtu.be/AWUqBauQ0d8',
   },
   {
     id: 17, title: 'Salud y estilo de vida', subtitle: 'Cuidar integralmente la vida que recibimos.',
@@ -250,7 +251,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Una enfermedad indica poca fe?', answer: 'No. Evitá culpar a quien está enfermo; necesita cuidado y compañía.' },
       { question: '¿El estudio reemplaza la atención médica?', answer: 'No. Para cambios relacionados con tratamientos o condiciones de salud, consultá al profesional que te atiende.' },
-    ], sourceUrl: pdf(17),
+    ], sourceUrl: pdf(17), videoUrl: 'https://youtu.be/tFASI5zUCTQ',
   },
   {
     id: 18, title: 'Administrar con Dios', subtitle: 'Gratitud y generosidad con lo que recibimos.',
@@ -264,7 +265,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Ofrendar garantiza riqueza?', answer: 'No. La generosidad expresa confianza y solidaridad; no es una transacción para obtener prosperidad.' },
       { question: '¿Cómo aprender la práctica local?', answer: 'Pedí a la iglesia información clara sobre destino, administración y rendición de cuentas de los recursos.' },
-    ], sourceUrl: pdf(18),
+    ], sourceUrl: pdf(18), videoUrl: 'https://youtu.be/Cq3Vj1as4eg',
   },
   {
     id: 19, title: 'El don de profecía', subtitle: 'Discernir los dones a la luz de la Biblia.',
@@ -278,7 +279,7 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Sus escritos sustituyen la Biblia?', answer: 'No. La posición adventista mantiene a la Biblia como norma de fe y criterio para toda enseñanza.' },
       { question: '¿Cómo comenzar a conocer su obra?', answer: 'Leé un texto centrado en Cristo y contrastá sus referencias bíblicas con tu instructor.' },
-    ], sourceUrl: pdf(19),
+    ], sourceUrl: pdf(19), videoUrl: 'https://youtu.be/4na8QssOUeI',
   },
   {
     id: 20, title: 'Una respuesta personal', subtitle: 'Elegir el próximo paso con fe y libertad.',
@@ -292,6 +293,6 @@ export const lessons: Lesson[] = [
     faqs: [
       { question: '¿Qué pasa si aún tengo dudas?', answer: 'Anotalas y acordá encuentros para estudiarlas. Una decisión de fe necesita comprensión y libertad.' },
       { question: '¿El seguimiento termina aquí?', answer: 'No. El instructor puede continuar acompañando la integración, el crecimiento espiritual y el servicio.' },
-    ], sourceUrl: pdf(20),
+    ], sourceUrl: pdf(20), videoUrl: 'https://youtu.be/1jaOPCGNTxk',
   },
 ];

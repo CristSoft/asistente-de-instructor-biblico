@@ -1,5 +1,5 @@
 {
-  "name": "el-camino",
+  "name": "instructor-biblico-pro",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test:rules": "firebase emulators:exec --only firestore --project demo-el-camino \"node scripts/test-firestore-rules.mjs\"",
-    "test:ui": "node scripts/test-app.mjs"
+    "test:ui": "node scripts/test-app.mjs",
+    "test:updates": "node scripts/test-updates.mjs"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.3.0",

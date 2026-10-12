@@ -1,4 +1,4 @@
-# Firebase de El Camino
+# Firebase de Instructor Bíblico Pro
 
 ## Proyecto conectado
 

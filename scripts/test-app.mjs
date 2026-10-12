@@ -15,8 +15,10 @@ const dialog = () => page.getByRole('dialog');
 const closeDialog = () => dialog().getByRole('button', { name: 'Cerrar ventana' }).click();
 try {
   await page.goto(process.env.APP_BASE_URL || 'http://127.0.0.1:5173', { waitUntil: 'commit' });
-  await page.getByRole('button', { name: 'Iniciar sesión', exact: true }).waitFor({ timeout: 60000 });
-  await expect(page.getByRole('button', { name: 'Iniciar sesión', exact: true })).toBeEnabled();
+  await page.getByRole('button', { name: 'Continuar con Google', exact: true }).waitFor({ timeout: 60000 });
+  await expect(page.getByRole('button', { name: 'Continuar con Google', exact: true })).toBeEnabled();
+  await expect(page.locator('.auth-form button').first()).toHaveText('Continuar con Google');
+  await expect(page.getByRole('button', { name: 'Ingresar con correo', exact: true })).toBeEnabled();
   await page.getByRole('button', { name: 'Crear una cuenta', exact: true }).click();
   await expect(page.getByLabel('Tu nombre')).toBeVisible();
   await expect(page.getByRole('button', { name: 'Crear mi cuenta' })).toBeEnabled();
@@ -24,12 +26,18 @@ try {
   await page.getByRole('button', { name: 'Olvidé mi contraseña' }).click();
   await expect(page.getByRole('button', { name: 'Enviar enlace' })).toBeEnabled();
   await page.getByRole('button', { name: 'Iniciar sesión', exact: true }).click();
-  await expect(page.getByRole('button', { name: 'Google', exact: true })).toBeEnabled();
-  passed('Auth: alta, ingreso, recuperación y Google disponibles y configurados');
+  await expect(page.getByRole('button', { name: 'Continuar con Google', exact: true })).toBeEnabled();
+  passed('Auth: Google como primera opción; alta, ingreso y recuperación por correo disponibles');
 
   await page.getByRole('button', { name: /Explorar la demostración/ }).click();
   await expect(page.locator('.student-card')).toHaveCount(4);
   await expect(page.locator('.demo-banner')).toContainText('solo en este dispositivo');
+  await expect(page.locator('.brand strong').first()).toHaveText('Instructor Bíblico Pro');
+  await expect(page.locator('.welcome-banner')).toHaveCount(0);
+  await expect(page.locator('.guide-mini')).toHaveCount(0);
+  await expect(page.locator('.students-toolbar').getByRole('textbox', { name: 'Buscar estudiantes' })).toBeVisible();
+  await expect(page.locator('.students-toolbar').getByRole('button', { name: 'Nuevo estudiante' })).toBeVisible();
+  await expect(page.locator('.students-toolbar button')).toHaveCount(1);
   passed('Demo identificada con cuatro estudiantes ficticios');
 
   await page.getByRole('button', { name: 'Nuevo estudiante' }).click();
@@ -107,6 +115,9 @@ try {
   passed('Búsqueda, filtro y estado vacío comprensible');
 
   await page.getByRole('button', { name: 'Mi agenda', exact: true }).click();
+  let meetingDay = page.locator(`.calendar-date[data-date="${appointment.slice(0, 10)}"]`);
+  if (!await meetingDay.count()) await page.getByRole('button', { name: 'Mes siguiente' }).click();
+  await meetingDay.click();
   await expect(page.locator('.agenda-meeting').filter({ hasText: 'Prueba Requisitos Editada' })).toContainText(/16:30|04:30 p\. m\./);
   await page.locator('.agenda-meeting').filter({ hasText: 'Prueba Requisitos Editada' }).click();
   await expect(page.getByRole('heading', { name: 'Prueba Requisitos Editada', exact: true })).toBeVisible();
@@ -184,7 +195,7 @@ try {
   passed('20 lecciones: 80 preguntas/referencias/respuestas, 60 claves, 40 FAQ y fuentes por hoja');
   await expect(page.getByRole('button', { name: 'Salir de la demostración' })).toBeVisible();
   await page.getByRole('button', { name: 'Salir de la demostración' }).click();
-  await expect(page.getByRole('button', { name: 'Iniciar sesión', exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Continuar con Google', exact: true })).toBeVisible();
   passed('Salida de demo retira registros');
   if (errors.length) throw new Error(`Errores runtime: ${errors.join('; ')}`);
   passed('Sin errores JavaScript en navegación y operaciones');

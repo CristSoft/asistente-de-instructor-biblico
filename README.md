@@ -1,4 +1,4 @@
-# El Camino · Asistente bíblico
+# Instructor Bíblico Pro · Asistente bíblico
 
 Una agenda de acompañamiento para instructores bíblicos adventistas. Construida con React, TypeScript y Firebase, con una interfaz calma en ocre, dorado y blanco.
 
@@ -8,7 +8,9 @@ Una agenda de acompañamiento para instructores bíblicos adventistas. Construid
 - Seguimiento individual de las 20 lecciones de **La fe de Jesús**.
 - Notas generales y notas independientes para cada tema de cada estudiante.
 - Preguntas de apoyo, referencias bíblicas, respuestas orientativas, puntos clave y preguntas frecuentes.
-- Biblioteca de estudios y agenda de encuentros.
+- Biblioteca de estudios y agenda diaria con selección de fecha y encuentros ordenados por hora.
+- Videos para la introducción y las 20 lecciones, con menú de compartir del dispositivo y alternativas para copiar el enlace.
+- Google como primera opción de acceso, seguido de correo y contraseña.
 - Cuentas con Firebase Authentication y datos privados por instructor en Cloud Firestore.
 - Demostración explícita con personas ficticias; sus cambios permanecen solo en este navegador y no se mezclan con cuentas reales.
 
@@ -44,7 +46,7 @@ La aplicación no habilita caché persistente de Firestore en el dispositivo. Pa
 
 La edición inicial contiene 20 temas siguiendo la guía **La fe de Jesús**. Las preguntas y explicaciones de apoyo son una elaboración editorial propia y se distinguen del material oficial; cada lección enlaza a su fuente. Las explicaciones se ofrecen desde la perspectiva adventista. Ver [fuentes y criterio editorial](docs/CONTENT-SOURCES.md).
 
-El nombre, símbolo e ilustraciones de El Camino son propios de esta aplicación y no representan una publicación oficial de la Iglesia Adventista del Séptimo Día.
+El nombre, símbolo e ilustraciones de Instructor Bíblico Pro son propios de esta aplicación y no representan una publicación oficial de la Iglesia Adventista del Séptimo Día.
 
 ## Firebase y publicación
 

@@ -21,4 +21,5 @@ export interface Lesson {
   keyPoints: string[];
   faqs: { question: string; answer: string }[];
   sourceUrl: string;
+  videoUrl: string;
 }

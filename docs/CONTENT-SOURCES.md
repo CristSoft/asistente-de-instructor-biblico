@@ -48,3 +48,35 @@ Se conservan el marco adventista y el énfasis pastoral: salvación por gracia, 
 - El primer PDF incluye instrucciones de uso antes de la lección; su tema se verificó en la tercera página. En los restantes se comprobó en la segunda página.
 - Como referencia doctrinal adicional se consultaron los [principios de fe oficiales](https://institucional.adventistas.org/es/nuestras-crencias/) y las [preguntas frecuentes de la Iglesia Adventista](https://www.adventistas.org/es/faq/).
 - Las referencias se ofrecen para lectura contextual; esta aplicación no contiene el texto completo de una Biblia ni reemplaza el material original. Una revisión pastoral local puede ajustar el vocabulario al estudiante sin alterar la fuente o su numeración.
+
+## Videos suministrados por el usuario · 12 de octubre de 2026
+
+Se incorporaron una introducción y veinte videos conservando exactamente la asignación numérica indicada por el usuario. No se modificaron los temas, las preguntas, el orden de las hojas ni el progreso de los estudiantes. Las URLs canónicas no incluyen parámetros de seguimiento.
+
+Se consultaron con éxito los metadatos de los 21 enlaces mediante el servicio oficial YouTube oEmbed (`https://www.youtube.com/oembed`), con HTTPS y validación TLS. Todos identifican al canal **Adventistas Perú - Sur**. Los títulos de las lecciones presentan la misma numeración de la lista y, salvo la observación siguiente, corresponden a los temas de la guía usada en la app. La introducción está identificada por el canal como material promocional del curso.
+
+**Observación sobre la hoja 9:** el título publicado en YouTube es «LECCIÓN 9 ¿Realmente volverá Jesús? | La fe de Jesús», mientras que la hoja 9 de la edición DSA 2020 trata de la muerte y la resurrección. El título repite el tema de la lección 7. Se conserva el enlace solicitado por el usuario; no se ha inferido un cambio de orden ni de contenido. La verificación fue de metadatos, no una revisión audiovisual completa, por lo que no permite determinar si se trata únicamente de un error del título del canal.
+
+| Asignación | Video |
+| --- | --- |
+| Introducción | [Ver video](https://youtu.be/8Avps3cOQJU) |
+| 1 | [Ver video](https://youtu.be/dsdjHEMnFJs) |
+| 2 | [Ver video](https://youtu.be/yCIyxcDc5Z4) |
+| 3 | [Ver video](https://youtu.be/_yl_pItOdTw) |
+| 4 | [Ver video](https://youtu.be/8w3sjVY7bRQ) |
+| 5 | [Ver video](https://youtu.be/A6w0d7LF5ww) |
+| 6 | [Ver video](https://youtu.be/iaF_vSdc-ZQ) |
+| 7 | [Ver video](https://youtu.be/fuLlTdP1P14) |
+| 8 | [Ver video](https://youtu.be/4ln-8_VU8F0) |
+| 9 | [Ver video](https://youtu.be/833vgB1ANtw) |
+| 10 | [Ver video](https://youtu.be/NkI67z22dgk) |
+| 11 | [Ver video](https://youtu.be/t-u3fhpCSiM) |
+| 12 | [Ver video](https://youtu.be/TGj8mUZ3hY8) |
+| 13 | [Ver video](https://youtu.be/DgfG73uVqY4) |
+| 14 | [Ver video](https://youtu.be/EEdFcIuU0UY) |
+| 15 | [Ver video](https://youtu.be/46Bi3O6PXgg) |
+| 16 | [Ver video](https://youtu.be/AWUqBauQ0d8) |
+| 17 | [Ver video](https://youtu.be/tFASI5zUCTQ) |
+| 18 | [Ver video](https://youtu.be/Cq3Vj1as4eg) |
+| 19 | [Ver video](https://youtu.be/4na8QssOUeI) |
+| 20 | [Ver video](https://youtu.be/1jaOPCGNTxk) |
